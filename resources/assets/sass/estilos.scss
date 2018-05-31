@@ -1,0 +1,414 @@
+// HEADER
+
+.header
+{
+    z-index: 500;
+    -webkit-box-shadow: 0px 19px 24px -6px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 19px 24px -6px rgba(0,0,0,0.75);
+box-shadow: 0px 19px 24px -6px rgba(0,0,0,0.75);
+}
+
+div.logo
+{
+    text-align: center;
+}
+.iconos-header
+{
+    font-size: 1.2em;
+
+    span i:last-child
+    {
+        color: #adb5bd;
+    }
+
+    span i.fa-circle
+    {
+        color: #eaeaea;
+    }
+
+    span:hover
+    {
+        i.fa-circle
+        {
+            @include iconos($colorDorado);
+        }
+
+        i:last-child
+        {
+            @include iconos(#fff);
+        }
+
+    }
+
+}
+
+.titulo
+{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    color: #000;
+}
+
+.titulo:after
+{
+
+    content: '';
+    margin: 0 auto;
+    background-image: url($rutaImagenes+'varita.png') !important;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 123px;
+    display: block;
+    z-index: 1000;
+
+}
+
+// MENU
+div.fondo-menu
+{
+    background-color: rgba(255, 255, 255, 0.3);
+    z-index: 400;
+    position: absolute;
+    width: 100%;
+
+    nav
+    {
+        background-color: rgba(255, 255, 255, 0.0)  !important;
+
+        div
+        {
+            border-top: 2px solid #2f201e;
+            border-bottom: 2px solid #2f201e;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 1.2em;
+        }
+
+        ul li a
+        {
+            color: #000 !important;
+        }
+
+        ul li:hover a
+        {
+            color: #d0a321 !important;
+            transition: all .3s ease;
+        }
+
+    }
+
+}
+
+div.degradado
+{
+    height: 25px;
+    border-bottom: solid #fff 6px;
+    background: #ffffff; /* Old browsers */
+    background: -moz-linear-gradient(left, #ffffff 0%, #e6b420 50%, #ffffff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #ffffff 0%,#e6b420 50%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #ffffff 0%,#e6b420 50%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+}
+
+
+//NUESTRA HISTORIA
+div.nuestra-historia
+{
+    margin-left: 350px;
+    position: absolute;
+    z-index: 100;
+    background-color: #fff;
+    padding: 20px 50px;
+}
+
+div.nuestra-historia + div
+{
+    background-image: url($rutaImagenes+'tacos.png') !important;
+}
+
+
+// LOS MEJORES TACOS
+
+div.los-tacos
+{
+    background-color: #fff;
+
+    h1
+    {
+        text-transform: uppercase;
+    }
+
+}
+
+//SERVICIOS
+
+div.servicios
+{
+    div:first-child
+    {
+        background-color: rgba(255, 255, 255, 0.3);
+
+        h3
+        {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500;
+            font-size: 2em;
+        }
+    }
+
+}
+
+//FOOTER
+footer
+{
+    background-color: #272727;
+    color: #fff;
+}
+
+
+// TITULO MENU
+
+div.titulo-pagina
+{
+    height: 250px;
+    text-align: center;
+    padding-top: 100px;
+    background-color: rgba(0, 0, 0, 0.3);
+    h3
+    {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        font-size: 3.5em;
+        color: #fff;
+    }
+}
+
+
+div.lista-menu
+{
+    div ul a
+    {
+        text-decoration: none;
+        li
+        {
+            margin-left: 10px;
+            color: #000;
+            display: inline-block !important;
+        }
+    }
+
+}
+.activo-menu
+{
+    color: $colorDorado !important;
+    border-bottom: 1px solid #000;
+}
+
+div.contenedor-platillos
+{
+    background-color: #fff;
+    div div:nth-child(2)
+    {
+        h4
+        {
+            font-family: 'Raleway', sans-serif;
+            font-weight: 400;
+            border-bottom: 1px dashed #000;
+        }
+        p
+        {
+            font-family: 'Raleway', sans-serif;
+        }
+    }
+
+    div div:nth-child(3)
+    {
+        p
+        {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 1.6em;
+            span
+            {
+                font-size: 1em !important;
+            }
+        }
+        i
+        {
+            font-size: 1.4em;
+        }
+
+    }
+}
+.fa-minus-circle
+{
+    color: #df0024;
+    left: 0;
+    right: 0;
+}
+.fa-plus-circle
+{
+    color: #43d63a;
+}
+
+div.tabla-pedido
+{
+    table tbody tr td
+    {
+        width: 0px;
+    }
+
+    background-color: #fff;
+    div.total-pagar
+    {
+        border-top: solid 1px #000;
+
+        div div:first-child a
+        {
+            color: #fff;
+        }
+
+        div div:last-child
+        {
+            font-size: 1.3em;
+            p:first-child b
+            {
+                color: red;
+                font-size: 1.2em;
+            }
+            p:last-child
+            {
+                font-size: .7em;
+            }
+        }
+    }
+}
+
+div.tabla-pedido > p
+{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.4em;
+}
+
+div.invitado
+{
+    position: relative;
+    overflow: hidden;
+}
+
+div.invitado img
+{
+    max-width: 100%;
+    /**Con esto se aplican filtros a las fotos**/
+    transition: all .5s ease-in-out;
+
+}
+
+div.invitado:hover img
+{
+    transform: scale(1.1);
+}
+
+div.formulario-contacto
+{
+    background-color: #fff;
+    @include sombraContacto();
+}
+
+div.nuestra-ubicacion
+{
+
+    background-color: #fff;
+    text-align: center;
+    @include sombraContacto();
+    p:first-child
+    {
+        color: #000;
+        border: none;
+    }
+    p
+    {
+        margin-top: 5px;
+        color: #969696;
+        padding-bottom: 2px;
+        border-bottom: 1px solid #969696;
+    }
+    a
+    {
+        display: block;
+    }
+}
+
+div.descrip-taquiza,
+div.formulario-cotizar
+{
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+div.info-taquiza
+{
+    background-image: url($rutaImagenes+'taquiza.png') !important;
+
+    div.descrip-taquiza
+    {
+
+        h2
+        {
+            color: $colorDorado;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 1.8em;
+            border-bottom: 1px solid #000;
+        }
+        p
+        {
+            font-weight: 600;
+            font-size: 1em;
+        }
+    }
+}
+
+div.formulario-cotizar
+{
+    h5.card-header
+    {
+        font-family: 'Poppins', sans-serif;
+        text-transform: uppercase;
+        color: #fff;
+        background-color: $colorDorado;
+    }
+}
+
+div.tabla-precio
+{
+    border: 1px solid #e1e1e1;
+    background-color: #fff;
+    transition: all .3s ease;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 20px;
+    // ul li:nth-child(2)
+    // {
+
+    // }
+    p span
+    {
+        display: block;
+        font-weight: bold;
+        margin-top: 15px;
+    }
+}
+
+div.tabla-precio:hover
+{
+    transform: scale(1.1);
+    border: 1px solid $colorDorado;
+    box-shadow: 0px 0px 50px #666;
+}
+
+div.tabla-precio h4
+{
+    margin-top: 10px;
+    padding-bottom: 10px;
+    color: $colorDorado;
+    border-bottom: solid 1px #000;
+}
